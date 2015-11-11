@@ -33,7 +33,7 @@ bool CSplashScene::Initialize()
 
 	//CSound::Play(SE_SPLASH);
 	m_dwCount = 0;
-	m_uTexID = LoadTexture("../data/texture/img_0.tga");
+	m_uTexID = LoadTexture("../data/texture/logo.tga");
 
 	return true;
 }
@@ -101,23 +101,23 @@ void CSplashScene::Draw()
 
 	vtxQuad[0].tu = 0.0f;
 	vtxQuad[0].tv = 0.0f;
-	vtxQuad[0].x  = (SCREEN_WIDTH / 2) - 256.0f;
-	vtxQuad[0].y  = (SCREEN_HEIGHT / 2) + 256.0f;
+	vtxQuad[0].x  = (SCREEN_WIDTH / 2) - 300.0f;
+	vtxQuad[0].y  = (SCREEN_HEIGHT / 2) + 170.0f;
 	vtxQuad[0].z  = 0.0f;
 	vtxQuad[1].tu = 1.0f;
 	vtxQuad[1].tv = 0.0f;
-	vtxQuad[1].x  = (SCREEN_WIDTH / 2) + 256.0f;
-	vtxQuad[1].y  = (SCREEN_HEIGHT / 2) + 256.0f;
+	vtxQuad[1].x  = (SCREEN_WIDTH / 2) + 300.0f;
+	vtxQuad[1].y  = (SCREEN_HEIGHT / 2) + 170.0f;
 	vtxQuad[1].z  = 0.0f;
 	vtxQuad[2].tu = 1.0f;
 	vtxQuad[2].tv = 1.0f;
-	vtxQuad[2].x  = (SCREEN_WIDTH / 2) + 256.0f;
-	vtxQuad[2].y  = (SCREEN_HEIGHT / 2) - 256.0f;
+	vtxQuad[2].x  = (SCREEN_WIDTH / 2) + 300.0f;
+	vtxQuad[2].y  = (SCREEN_HEIGHT / 2) - 170.0f;
 	vtxQuad[2].z  = 0.0f;
 	vtxQuad[3].tu = 0.0f;
 	vtxQuad[3].tv = 1.0f;
-	vtxQuad[3].x  = (SCREEN_WIDTH / 2) - 256.0f;
-	vtxQuad[3].y  = (SCREEN_HEIGHT / 2) - 256.0f;
+	vtxQuad[3].x  = (SCREEN_WIDTH / 2) - 300.0f;
+	vtxQuad[3].y  = (SCREEN_HEIGHT / 2) - 170.0f;
 	vtxQuad[3].z  = 0.0f;
 
 	glEnable(GL_TEXTURE_2D);	// テクスチャ有効化

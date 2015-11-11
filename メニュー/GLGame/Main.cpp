@@ -24,10 +24,10 @@ int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPTSTR lpCmdLine,
 	// ウィンドウを作成
 	int nResult = EXIT_FAILURE;
 	CGameWindow* pWnd = new CGameWindow();
-	if (pWnd->CreateFrame(CAPTION_NAME,				// ウィンドウ キャプション
-		WS_OVERLAPPED | WS_SYSMENU | WS_CAPTION, 0,	// ウィンドウ スタイル，拡張スタイル
-		CW_USEDEFAULT, CW_USEDEFAULT,				// ウィンドウ位置
-		SCREEN_WIDTH, SCREEN_HEIGHT)) {				// クライアント領域サイズ
+	if (pWnd->CreateFrame(CAPTION_NAME,					// ウィンドウ キャプション
+		WS_OVERLAPPED | WS_SYSMENU | WS_CAPTION, 0,		// ウィンドウ スタイル，拡張スタイル
+		CW_USEDEFAULT, CW_USEDEFAULT,					// ウィンドウ位置
+		SCREEN_WIDTH, SCREEN_HEIGHT)) {					// クライアント領域サイズ
 		pWnd->Show(iCmdShow);							// ウィンドウを表示
 		pWnd->Update();									// ウィンドウ表示を更新
 		nResult = pWnd->Run();							// メッセージ ループ
