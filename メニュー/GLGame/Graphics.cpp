@@ -292,7 +292,8 @@ void CGraphics::Init3D()
 	// プロジェクション マトリックス設定
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(FOVY, (double)m_nWidth / m_nHeight, NEAR_CLIP, FAR_CLIP);
+	glOrtho((double)m_nWidth * -0.5,(double)m_nWidth * 0.5,(double)m_nHeight * -0.5,(double)m_nHeight * 0.5,NEAR_CLIP,FAR_CLIP);
+	//gluPerspective(FOVY, (double)m_nWidth / m_nHeight, NEAR_CLIP, FAR_CLIP);
 	glGetFloatv(GL_PROJECTION_MATRIX, m_MatProj.f);
 
 	// ビュー マトリックス設定
