@@ -10,7 +10,7 @@ class CMainScene : public CScene
 protected:
 	//-------- ゲーム用オブジェクト
 	CPlayer*	m_pPlayer;
-	CSound*		m_pSound;
+	//CSound*		m_pSound;
 	CCamera*	m_pCamera;
 	CSky*		m_pSky;
 

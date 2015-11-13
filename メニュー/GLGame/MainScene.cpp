@@ -6,7 +6,7 @@ CMainScene::CMainScene(void)
 	m_pPlayer = NULL;
 	m_pCamera = NULL;
 	m_pSky = NULL;
-	m_pSound = NULL;
+	//m_pSound = NULL;
 }
 
 // デストラクタ
@@ -25,10 +25,10 @@ bool CMainScene::Initialize()
 	m_pPlayer = new CPlayer(this);
 	m_pCamera = new CCamera(this);
 	m_pSky = new CSky(this);
-	m_pSound = new CSound(this);
+	//m_pSound = new CSound(this);
 	InitObj();				// 全オブジェクト初期化
 
-	m_pSound->Play(BGM_MARIO);
+	//m_pSound->Play(BGM_MARIO);
 
 	return true;
 }
@@ -40,7 +40,7 @@ void CMainScene::Finalize()
 {
 	//-------- ゲーム用オブジェクトの後始末
 	FinObj();				// 全オブジェクト破棄
-	SAFE_DELETE(m_pSound);
+	//SAFE_DELETE(m_pSound);
 	SAFE_DELETE(m_pSky);
 	SAFE_DELETE(m_pCamera);
 	SAFE_DELETE(m_pPlayer);
