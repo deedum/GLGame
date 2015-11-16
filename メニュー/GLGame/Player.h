@@ -1,10 +1,15 @@
 #pragma once
-#include "MeshObj.h"
+class CPlayer;
 
-class CPlayer :	public CMeshObj
+#include "C3DObj.h"
+#include "Billboard.h"
+
+class CPlayer :	public C3DObj
 {
 private:
-	MESH	m_mesh;
+	GLuint		m_tex;
+	VECTOR2		m_size;
+	CBillboard*	m_billboard;
 
 public:
 	CPlayer(CScene* pScene);

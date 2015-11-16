@@ -1,12 +1,15 @@
 #include "SplashScene.h"
 #include "Texture.h"
+//#include "Billboard.h"
 
+/*
 // 頂点フォーマット定義
 struct FVERTEX {
 	// GL_T2F_V3F
 	GLfloat		tu, tv;			// テクスチャ座標
 	GLfloat		x, y, z;		// 頂点座標
 };
+*/
 
 // コンストラクタ
 CSplashScene::CSplashScene(void)
@@ -85,15 +88,15 @@ void CSplashScene::Draw()
 
 	// スプラッシュ画面描画
 	float f, a;
-	if (m_dwCount < 128) {
+	if (m_dwCount < 64) {
 		a = 1.0f;
 		f = 0.0f;
-	} if (m_dwCount < 256) {
+	} if (m_dwCount < 128) {
 		f = 1.0f;
 		a = 1.0f;
 	} else {
 		f = 1.0f;
-		a = 1.0f - (m_dwCount - 256) * 2 / 255.0f;
+		a = 1.0f - (m_dwCount - 128) * 2 / 127.0f;
 	}
 	glColor4f(f, f, f, a);
 

@@ -1,5 +1,6 @@
 #include "MainScene.h"
 
+
 // コンストラクタ
 CMainScene::CMainScene(void)
 {
@@ -30,6 +31,7 @@ bool CMainScene::Initialize()
 
 	//m_pSound->Play(BGM_MARIO);
 
+	CBillboard::SetCamera(m_pCamera);
 	return true;
 }
 

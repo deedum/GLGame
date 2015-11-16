@@ -4,6 +4,7 @@
 #include "Sound.h"
 #include "Camera.h"
 #include "Sky.h"
+#include "Billboard.h"
 
 class CMainScene : public CScene
 {

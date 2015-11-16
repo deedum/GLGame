@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Billboard.cpp" />
     <ClCompile Include="C3DObj.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameWnd.cpp" />
@@ -98,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audiere.h" />
+    <ClInclude Include="Billboard.h" />
     <ClInclude Include="C3DObj.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="define.h" />

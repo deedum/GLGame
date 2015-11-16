@@ -30,6 +30,7 @@ enum EID {
 	ID_MISSILE,		// CMissileクラス
 	ID_LAND,		// CLandクラス
 	ID_JINTAI,		// CJintaiクラス
+	ID_BILLBORAD,		// CJintaiクラス
 
 	MAX_ID
 };

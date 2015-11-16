@@ -1,4 +1,6 @@
 #pragma once
+class CCamera;
+
 #include "C3DObj.h"
 #include "Player.h"
 #include "Sky.h"
