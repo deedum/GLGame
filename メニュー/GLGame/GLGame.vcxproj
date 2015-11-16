@@ -92,6 +92,7 @@
     <ClCompile Include="Sky.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SplashScene.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="tga.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="Sky.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SplashScene.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="tga.h" />
     <ClInclude Include="TitleScene.h" />

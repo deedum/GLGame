@@ -24,6 +24,7 @@ bool CMainScene::Initialize()
 
 	//-------- ゲーム用オブジェクトの初期化
 	m_pPlayer = new CPlayer(this);
+	m_pStage  = new CStage(this);
 	m_pCamera = new CCamera(this);
 	m_pSky = new CSky(this);
 	//m_pSound = new CSound(this);
@@ -45,6 +46,7 @@ void CMainScene::Finalize()
 	//SAFE_DELETE(m_pSound);
 	SAFE_DELETE(m_pSky);
 	SAFE_DELETE(m_pCamera);
+	SAFE_DELETE(m_pStage);
 	SAFE_DELETE(m_pPlayer);
 
 	CScene::Finalize();
