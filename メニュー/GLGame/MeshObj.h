@@ -2,13 +2,14 @@
 #include "C3DObj.h"
 #include "Mesh.h"
 
+#include "OBB.h"
+
 class CMeshObj : public C3DObj
 {
 protected:
 	MESH*	m_pMesh;
 
-	VECTOR3	m_vBBox;
-	VECTOR3	m_vCenter;
+	COBB	m_OBB;
 	float	m_fRadius;
 
 public:
@@ -19,8 +20,10 @@ public:
 	virtual void Draw(void);
 	virtual void PostDraw(void);
 	void SetMesh(MESH* pMesh);
-	VECTOR3& GetCenter(void) {return m_vCenter;}
+	
 	float GetRadius(void) {return m_fRadius;}
 	MESH* GetMesh(void) {return m_pMesh;}
-	VECTOR3& GetBBox(void) {return m_vBBox;}
+	COBB& GetOBB(void) {return m_OBB;}
+	bool IntersectOBB(COBB obb, MATRIX world);
+	bool IntersectAABB(COBB obb, MATRIX world, int type);
 };

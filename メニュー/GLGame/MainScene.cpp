@@ -24,7 +24,8 @@ bool CMainScene::Initialize()
 
 	//-------- ゲーム用オブジェクトの初期化
 	m_pPlayer = new CPlayer(this);
-	m_pStage  = new CStage(this);
+//	m_pStage  = new CStage(this);
+	m_pStage  = new CField(this);
 	m_pCamera = new CCamera(this);
 	m_pSky = new CSky(this);
 	//m_pSound = new CSound(this);
@@ -75,6 +76,9 @@ void CMainScene::Draw()
 	//----- ここに描画処理
 	m_pCamera->InitDraw();		// カメラ設定
 	DrawObj();					// 全オブジェクト描画
+
+	MATRIX mWorld = m_pPlayer->GetWorld();
+	VECTOR3 mPos = m_pPlayer->GetPos();
 
 	// デバッグ文字列描画
 	m_pGraph->DrawText(0, 0, m_szDebug);

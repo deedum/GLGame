@@ -32,4 +32,5 @@ public:
 	void Release();
 	static CBillboard* Create(GLuint texTd, VECTOR2 size, VECTOR3 pos);
 	static void SetCamera(CCamera* pCamera){m_pCamera = pCamera;}
+	MATRIX GetWorld(void){return m_world;}
 };

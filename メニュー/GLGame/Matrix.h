@@ -53,6 +53,21 @@ typedef union _MATRIX {	// ïœä∑çsóÒ
 	};
 	float		m[4][4];
 } MATRIX;
+//
+//VECTOR3 & operator+(VECTOR3 &a, VECTOR3 &b){
+//	a.x += b.x;
+//	a.y += b.y;
+//	a.z += b.z;
+//
+//	return a;
+//}
+//VECTOR3 & operator-(VECTOR3 &a, VECTOR3 &b){
+//	a.x -= b.x;
+//	a.y -= b.y;
+//	a.z -= b.z;
+//
+//	return a;
+//}
 
 void MatrixIdentity(MATRIX* pMatrix);
 void MatrixTranslation(MATRIX* pMatrix, float x, float y, float z);
@@ -71,5 +86,10 @@ float Vec3Length(VECTOR3* pIn);
 void Vec3Normalize(VECTOR3* pOut, VECTOR3* pIn);
 void Vec3Cross(VECTOR3* pOut, VECTOR3* pL, VECTOR3* pR);
 float Vec3Dot(VECTOR3* pL, VECTOR3* pR);
+void Vec3Set(VECTOR3* Vec3,float x, float y, float z);
+VECTOR3 Vec3GetAxisX(MATRIX mat);
+VECTOR3 Vec3GetAxisY(MATRIX mat);
+VECTOR3 Vec3GetAxisZ(MATRIX mat);
 
+MATRIX MtxLookAt(VECTOR3 eye, VECTOR3 center, VECTOR3 up);
 #endif

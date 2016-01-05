@@ -16,4 +16,7 @@ public:
 	virtual void Draw(void);
 	virtual void PostDraw(void);
 	virtual void Fin(void);
+
+	// ƒŒƒC‚Ì“–‚½‚è”»’è
+	bool Intersect(VECTOR3* pCross, VECTOR3* pPos, VECTOR3* pDir);
 };

@@ -26,12 +26,13 @@ public:
 class CCamera :	public C3DObj
 {
 protected:
+	VECTOR3			m_newPos;
 	VECTOR3			m_at;		// 注視点
 	VECTOR3			m_up;		// 上方向
-	int				m_camtype;	// 1:1人称、2:固定、3:3人称
-	CPlayer*		m_pPlayer;	// プレイヤー
+static	int			m_camtype;	// 1:東　2:北　3:西　4:南
 	CSky*			m_pSky;		// スカイドーム
 	CCameraInfo*	m_pCamInfo;	// カメラ情報
+	bool			m_bMove;	// 移動中
 
 public:
 	CCamera(CScene* pScene);
@@ -43,7 +44,7 @@ public:
 	void InitDraw(void);
 	void LookAt(VECTOR3* pAt);
 	void SetUp(VECTOR3* pUp);
-	void SetPlayer(CPlayer* pPlayer) {m_pPlayer = pPlayer;}
 	void SetSky(CSky* pSky) {m_pSky = pSky;}
 	void SetType(int nType) {m_camtype = nType;}
+	static int GetCameraType(){return m_camtype;}
 };

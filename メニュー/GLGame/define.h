@@ -27,8 +27,7 @@ enum EID {
 	ID_PLAYER,		// CPlayerクラス
 	ID_ENEMY,		// CEnemyクラス
 	ID_BULLET,		// CBulletクラス
-	ID_MISSILE,		// CMissileクラス
-	ID_LAND,		// CLandクラス
+	ID_STAGE,		// CStageクラス
 	ID_JINTAI,		// CJintaiクラス
 	ID_BILLBORAD,		// CJintaiクラス
 

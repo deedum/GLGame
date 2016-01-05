@@ -48,23 +48,23 @@ CBillboard* CBillboard::Create(GLuint texId, VECTOR2 size, VECTOR3 pos)
 	billboard->m_pos = pos;
 	billboard->m_vtxQuad[0].tu = 0.0f;
 	billboard->m_vtxQuad[0].tv = 0.0f;
-	billboard->m_vtxQuad[0].x  = pos.x;// - size.x * 0.5f;
-	billboard->m_vtxQuad[0].y  = pos.y;// - size.y * 0.5f;
+	billboard->m_vtxQuad[0].x  = pos.x - size.x * 0.5f;
+	billboard->m_vtxQuad[0].y  = pos.y - size.y * 0.5f;
 	billboard->m_vtxQuad[0].z  = pos.z;
 	billboard->m_vtxQuad[1].tu = 0.0f;
 	billboard->m_vtxQuad[1].tv = 1.0f;
-	billboard->m_vtxQuad[1].x  = pos.x;// - size.x * 0.5f;
-	billboard->m_vtxQuad[1].y  = pos.y + size.y;// * 0.5f;
+	billboard->m_vtxQuad[1].x  = pos.x - size.x * 0.5f;
+	billboard->m_vtxQuad[1].y  = pos.y + size.y * 0.5f;
 	billboard->m_vtxQuad[1].z  = pos.z;
 	billboard->m_vtxQuad[2].tu = 1.0f;
 	billboard->m_vtxQuad[2].tv = 1.0f;
-	billboard->m_vtxQuad[2].x  = pos.x + size.x;// * 0.5f;
-	billboard->m_vtxQuad[2].y  = pos.y + size.y;// * 0.5f;
+	billboard->m_vtxQuad[2].x  = pos.x + size.x * 0.5f;
+	billboard->m_vtxQuad[2].y  = pos.y + size.y * 0.5f;
 	billboard->m_vtxQuad[2].z  = pos.z;
 	billboard->m_vtxQuad[3].tu = 1.0f;
 	billboard->m_vtxQuad[3].tv = 0.0f;
-	billboard->m_vtxQuad[3].x  = pos.x + size.x;// * 0.5f;
-	billboard->m_vtxQuad[3].y  = pos.y;// - size.y * 0.5f;
+	billboard->m_vtxQuad[3].x  = pos.x + size.x * 0.5f;
+	billboard->m_vtxQuad[3].y  = pos.y - size.y * 0.5f;
 	billboard->m_vtxQuad[3].z  = pos.z;
 	return billboard;
 }
@@ -78,8 +78,6 @@ void CBillboard::PostUpdate(void)
 	MATRIX matView = m_pCamera->GetWorld();
 	MATRIX mWorld = m_world;
 	MatrixIdentity(&mWorld);
-	// 現在位置更新
-	mWorld.v[3].v3 = m_pos;
 
 	// ビルボード用ワールド変換行列作成
 	mat._11 = matView._11;

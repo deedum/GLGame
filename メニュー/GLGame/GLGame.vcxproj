@@ -77,8 +77,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Billboard.cpp" />
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="C3DObj.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Field.cpp" />
     <ClCompile Include="GameWnd.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -87,6 +89,7 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MeshObj.cpp" />
+    <ClCompile Include="OBB.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Sky.cpp" />
@@ -101,9 +104,11 @@
   <ItemGroup>
     <ClInclude Include="audiere.h" />
     <ClInclude Include="Billboard.h" />
+    <ClInclude Include="Block.h" />
     <ClInclude Include="C3DObj.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="define.h" />
+    <ClInclude Include="Field.h" />
     <ClInclude Include="GameWnd.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Input.h" />
@@ -111,6 +116,7 @@
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="MeshObj.h" />
+    <ClInclude Include="OBB.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sky.h" />

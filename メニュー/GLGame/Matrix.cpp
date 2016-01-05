@@ -196,3 +196,77 @@ float Vec3Dot(VECTOR3* pL, VECTOR3* pR)
 {
 	return pL->x * pR->x + pL->y * pR->y + pL->z * pR->z;
 }
+
+MATRIX MtxLookAt(VECTOR3 eye, VECTOR3 center, VECTOR3 up){
+	VECTOR3 forward;
+	
+	forward.x = center.x - eye.x;
+	forward.y = center.y - eye.y;
+	forward.z = center.z - eye.z;
+
+	Vec3Normalize(&forward, &forward);
+
+	VECTOR3 side;
+	Vec3Cross(&side, &forward, &up);
+
+	Vec3Normalize(&side,&side);
+
+	MATRIX Out;
+	Out._11 = side.x;
+	Out._12 = up.x;
+	Out._13 = forward.x * -1.0f;
+	Out._14 = 0;
+	Out._21 = side.y;
+	Out._22 = up.y;
+	Out._23 = forward.y * -1.0f;
+	Out._24 = 0;
+	Out._31 = side.z;
+	Out._32 = up.z;
+	Out._33 = forward.z * -1.0f;
+	Out._34 = 0;
+	Out._41 = center.x;
+	Out._42 = center.y;
+	Out._43 = center.z;
+	Out._44 = 1;
+
+	MATRIX m;
+	MatrixIdentity(&m);
+	MatrixMultiply(&Out, &m, &Out);
+
+	return Out;
+}
+
+void Vec3Set(VECTOR3* Vec3,float x, float y, float z)
+{
+	Vec3->x = x;
+	Vec3->y = y;
+	Vec3->z = z;
+
+}
+VECTOR3 Vec3GetAxisX(MATRIX mat)
+{
+	VECTOR3 Vec3;
+	Vec3.x = mat._11;
+	Vec3.y = mat._12;
+	Vec3.z = mat._13;
+
+	return Vec3;
+}
+VECTOR3 Vec3GetAxisY(MATRIX mat)
+{
+	VECTOR3 Vec3;
+	Vec3.x = mat._21;
+	Vec3.y = mat._22;
+	Vec3.z = mat._23;
+
+	return Vec3;
+}
+VECTOR3 Vec3GetAxisZ(MATRIX mat)
+{
+	VECTOR3 Vec3;
+	Vec3.x = mat._31;
+	Vec3.y = mat._32;
+	Vec3.z = mat._33;
+
+	return Vec3;
+}

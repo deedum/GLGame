@@ -10,7 +10,7 @@
 #include "Texture.h"
 
 // 定数
-#define RAD					(float)(M_PI/180.0)				// ラジアン変換用定数
+#define RAD					(float)(3.1415926/180.0)				// ラジアン変換用定数
 
 #define FONT_WIDTH			10								// フォント幅
 #define FONT_HEIGHT			16								// フォント高さ
@@ -293,7 +293,7 @@ void CGraphics::Init3D()
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glOrtho((double)m_nWidth * -0.5,(double)m_nWidth * 0.5,(double)m_nHeight * -0.5,(double)m_nHeight * 0.5,NEAR_CLIP,FAR_CLIP);
-	//gluPerspective(FOVY, (double)m_nWidth / m_nHeight, NEAR_CLIP, FAR_CLIP);
+//	gluPerspective(FOVY, (double)m_nWidth / m_nHeight, NEAR_CLIP, FAR_CLIP);
 	glGetFloatv(GL_PROJECTION_MATRIX, m_MatProj.f);
 
 	// ビュー マトリックス設定

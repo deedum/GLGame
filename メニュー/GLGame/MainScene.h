@@ -6,6 +6,7 @@
 #include "Sky.h"
 #include "Billboard.h"
 #include "Stage.h"
+#include "Field.h"
 
 class CMainScene : public CScene
 {
@@ -13,7 +14,8 @@ protected:
 	//-------- ゲーム用オブジェクト
 	CPlayer*	m_pPlayer;
 	//CSound*		m_pSound;
-	CStage*		m_pStage;
+//	CStage*		m_pStage;
+	CField*		m_pStage;
 	CCamera*	m_pCamera;
 	CSky*		m_pSky;
 
@@ -25,4 +27,5 @@ public:
 	virtual void Finalize();
 	virtual void Update();
 	virtual void Draw();
+
 };
